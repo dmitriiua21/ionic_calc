@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <form class="calculator__form">
+    <ion-item class="calculator">
+      <ion-input type="text" placeholder="0" name="display" [(ngModel)]="inputField"></ion-input>
+    </ion-item>
+  </form>
+
+  <div class="calculator">
+
+    <div class="calculator__row">
+      <button ion-button full color="danger" (click)="displayClear()"> C </button>
+      <button ion-button full color="secondary" (click)="clickFunc('%')"> % </button>
+      <button ion-button full color="secondary" (click)="clickFunc('/')"> / </button>
+    </div>
+
+    <div class="calculator__row">
+      <button ion-button full (click)="clickFunc('7')"> 7 </button>
+      <button ion-button full (click)="clickFunc('8')"> 8 </button>
+      <button ion-button full (click)="clickFunc('9')"> 9 </button>
+      <button ion-button full color="secondary" (click)="clickFunc('*')"> * </button>
+    </div>
+
+    <div class="calculator__row">
+      <button ion-button full (click)="clickFunc('4')"> 4 </button>
+      <button ion-button full (click)="clickFunc('5')"> 5 </button>
+      <button ion-button full (click)="clickFunc('6')"> 6 </button>
+      <button ion-button full color="secondary" (click)="clickFunc('-')"> - </button>
+    </div>
+
+    <div class="calculator__row">
+      <button ion-button full (click)="clickFunc('1')"> 1 </button>
+      <button ion-button full (click)="clickFunc('2')"> 2 </button>
+      <button ion-button full (click)="clickFunc('3')"> 3 </button>
+      <button ion-button full color="secondary" (click)="clickFunc('+')"> + </button>
+    </div>
+
+    <div class="calculator__row">
+      <button ion-button full (click)="clickFunc('0')"> 0 </button>
+      <button ion-button full (click)="clickFunc('.')"> . </button>
+      <button ion-button full color="danger" (click)="calculate()"> = </button>
+    </div>
+
+  </div>
+
+  <div class="calculator__user">
+    User : {{ userName }}
+  </div>
+
+</ion-content>

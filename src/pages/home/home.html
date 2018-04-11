@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked>Username</ion-label>
+      <ion-input type="text" #userName></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" #userPass></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="primary" block (click)="submitUser()">Sign In</button>
+  </div>
+
+</ion-content>
